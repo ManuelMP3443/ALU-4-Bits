@@ -46,17 +46,17 @@ El montaje físico permitió validar la lógica matemática frente a condiciones
 
 La transición del entorno ideal de simulación a la implementación física con tecnología TTL demostró ser un desafío de ingeniería invaluable. Dada la alta densidad de cableado requerida para interconectar los múltiples integrados en paralelo, este prototipo funcionó como una comprobación empírica extrema. 
 
-![Vista general del ALU cableado](images/alu-general.jpeg)
+<img src="images/alu-general.jpeg" width="400">
 
 El montaje se dividió en tres etapas principales sobre 4 protoboards:
 
 1. **Etapa de Entrada y Control:** Operandos y Opcodes se ingresan mediante dos módulos Dip-Switch. (Nota: Se utilizó un Arduino Uno de manera auxiliar exclusivamente como fuente regulada de 5V para alimentar los buses lógicos).
-![Entradas y alimentación](images/alu-inputs.jpeg)
+<img src="images/alu-inputs.jpeg" width="400">
 
 2. **Núcleo Lógico y Comparador:** El ruteo físico de las señales de acarreo (*carry propagation*) entre los 74LS86, 74LS08 y 74LS32 requirió un manejo cuidadoso para evitar diafonía o ruido que afectara los multiplexores y el comparador de magnitud 74LS85.
-![Comparador 74LS85 y Mux](images/alu-core.jpeg)
+<img src="images/alu-core.jpeg" width="400">
 
 3. **Etapa de Salida:** Aislamiento de las señales resultantes hacia un arreglo de 5 LEDs (4 bits de resultado + 1 bit de Carry-Out / Signo).
-![Salida de datos](images/alu-outputs.jpeg)
+<img src="images/alu-outputs.jpeg" width="400">
 
 Este montaje físico validó la lógica matemática frente a condiciones del mundo real, un paso crucial de depuración antes de escalar este módulo hacia un circuito impreso (PCB) o integrarlo al bus de datos de un procesador mayor.
